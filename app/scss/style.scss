@@ -1,0 +1,108 @@
+@import "mixin.scss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap');
+
+@import "reset.scss";
+// ********************************Подключение стилей компонентов******************
+@import "nav.scss";
+@import "header.scss";
+@import "aside.scss";
+@import "skils.scss";
+@import "galerry.scss";
+@import "footer.scss";
+// ********************************Подключение стилей компонентов******************
+
+html, body {
+   height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page {
+   height: 100%;
+   @include fontSize;
+   -webkit-text-size-adjust: 100%;
+   scroll-behavior: smooth;
+ }
+ 
+ .body {
+   margin: 0;
+   padding: 0 5px;
+   min-width: $minw;
+   min-height: 100%;
+   font-size: $size;
+   width: 100%;
+   color: $cP;
+ }
+ 
+ img {
+   height: auto;
+   max-width: 100%;
+   object-fit: cover;
+ }
+ 
+ a {
+   text-decoration: none;
+   color:inherit;
+ }
+ .side-container {
+    margin: 0 auto;
+    max-width: $mxw;
+   min-height: 100vh;
+   display: grid;
+   grid-template-columns: minmax(100px, 330px) minmax(300px, 1110px);
+   grid-template-rows: auto minmax(100px, 1fr) auto;
+   grid-template-areas:
+    'aside header'
+    'aside main   '
+    'aside footer '
+   ;
+
+  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+}
+.header{
+ grid-area: header;
+
+}
+.aside{
+   grid-area: aside;
+   background-color: $colBb2;
+}
+.main{
+   // flex:1 1 auto;
+   grid-area: main;
+}
+.footer{
+   grid-area: footer;
+   background-color: $colBg;
+  
+}
+
+
+// ********************************action**************************8
+
+.action {
+   padding: 45px;
+   background-color: $cBtn;
+   display: flex;
+   justify-content: space-around;
+
+   &__title {
+      @include h2;
+      color: $ch1;
+     
+   }
+}
+.btn {
+   padding: 10px 20px;
+   border: 2px solid #FFFFFF;
+   border-radius: 4px;
+   color: $ch1;
+   background: transparent;
+   cursor: pointer;
+}
+

@@ -1,0 +1,42 @@
+.skils {
+   padding: 63px 5vw;
+  
+   text-align: center;
+
+   &__title {
+      @include h2;
+      margin-bottom: 22px;
+   }
+
+   &__info {
+      margin-bottom: 62px;
+   }
+
+   &__box {
+      
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+   }
+
+   &__item {
+      padding: 10px;
+      text-align: left;
+   }
+}
+.skil {
+
+   &__img {
+      width: 100px;
+      margin-bottom: 20px;
+   }
+
+   &__text {
+      margin-bottom: 7px;
+   }
+}
+ 
+
+   .lern_more {
+      color: $cBtn;
+   }
+

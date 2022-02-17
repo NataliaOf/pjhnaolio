@@ -1,0 +1,54 @@
+.aside {
+   padding: 200px 40px 70px;
+   display: flex;
+   flex-direction: column;
+
+
+   &__title {
+      @include h2;
+      color: $cBtn;
+      margin-bottom: 60px;
+   }
+}
+.nav {
+
+}
+.menu {
+   text-align: center;
+
+   &__list {
+      margin: 40px 0;
+   }
+   &__link {
+      font-family: Oswald;
+       font-style: normal;
+       font-weight: normal;
+       font-size: 14px;
+       line-height: 20px;
+       text-align: center;
+       text-transform: uppercase;
+       color: #FFFFFF;
+       transition: color 0.5s ease-in;
+       &:hover{
+          color:$cBtn;
+       }
+       &.active{
+         color:$cBtn;
+       }
+      
+   }
+}
+.social {
+
+   &__box {
+      display: flex;
+      justify-content: space-around;
+      margin-top: auto;
+   }
+
+   &__icon {
+      width: 23px;
+      cursor: pointer;
+   }
+}
+

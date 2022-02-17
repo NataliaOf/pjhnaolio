@@ -1,0 +1,27 @@
+.gallery {
+   padding: 63px 5vw;
+  
+   text-align: center;
+   &__title{
+      @include h2;
+      margin-bottom: 22px;
+   }
+
+   &__info {
+      margin-bottom: 62px;
+   }
+
+   &__box {
+      display: grid;
+      gap:15px;
+      grid-template-columns: repeat(4, 1fr);
+   }
+
+   &__item {
+      box-sizing: border-box;
+   }
+
+   &__img {
+      box-sizing: border-box;
+   }
+}
