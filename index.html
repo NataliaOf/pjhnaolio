@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>NataliaOf</title>
+   <title>Главная</title>
    <link rel="stylesheet" href="css/animate.css">
    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="body ">
-   <div class="burger"><spsn class="burgr_line"></spsn></div>
+   <div class="burger"><spsn class="burgr_line">X</spsn></div>
    <div class="side-container">
       <header class="header" id="home">
   <img src="./images/header-img.jpg" alt="foto" class="header__img">
@@ -82,7 +82,7 @@
           </ul>
     </nav>
     <div class="aside__quoter">
-       <h3 class="quoter__title">Цтитата дня</h3>
+       <h3 class="quoter__title">Цитата дня</h3>
        <blockquote class="quoter__body">
           Мир во всем мире!
        </blockquote>
@@ -443,25 +443,23 @@
    <p class="footer__info">
       Вы ьожите написать мне email или оставить сообщение в telegram канале @Oficerovan.
    </p>
-   <form id="form" enctype="multipart/form-data" novalidate class="footer__form contact-form">
+   <form  method="post" action="/send.php" name="form"  novalidate class=" form footer__form contact-form">
       <div class="contact-form__input">
          <label for="name"class="label-name">Ваше имя *</label>
-         <input tabindex="1" type="text" id="name" name="name" class="form__name input " name="name" placeholder="Name">
+         <input tabindex="1" type="text" id="name" name="name" class="form__name input " name="name" placeholder="Ваше имя">
        </div>
        <div class="contact-form__input">
          <label class="label-email" for="email">Ваш email*</label>
-         <input tabindex="2" type="email" data-validate-field="email" name="email" id="email" name="email" placeholder="Email" class="form__email input ">
+         <input tabindex="2" type="email" data-validate-field="email" name="email" id="email" name="email" placeholder="Ваш email" class="form__email input ">
        </div>
        <div class="contact-form__textarea">
          <label class="label-textarea" for="email">Ваше сообщение*</label>
-         <textarea tabindex="3" name="message" id="" cols="30" rows="10" class="textarea" placeholder="Messege"></textarea>
+         <textarea tabindex="3" name="message" id="" cols="30" rows="10" class="textarea" placeholder="Ваше сообщение"></textarea>
        </div>
-       
+       <input type="hidden" name="act" value="order">
 
-      <!-- <input type="text" class="contact-form__input" name="name" placeholder="Name"> -->
-      <!-- <input type="text" class="contact-form__input" name="email" placeholder="Email"> -->
-      <!-- <textarea name="massege" id="" cols="30" rows="10" class="contact-form__textarea" placeholder="Messege"></textarea> -->
-      <button class="btn-red">Send</button>
+       <input type="hidden" name="act" value="order">
+      <button class="btn-red">Отправить</button>
    </form>
 <div class="copy">NATALIA OFICEROVA &#169</div>
    
